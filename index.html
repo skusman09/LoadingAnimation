@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loding Animation</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 0vh;
+            background: #000;
+        }
+
+        h1 {
+            text-align: center;
+            position: relative;
+            top: 15rem;
+            font-size: 3rem;
+            color: #222;
+            text-transform: capitalize;
+            border-bottom: 10px solid #222;
+            letter-spacing: 0.5rem;
+            line-height: 1.3em;
+        }
+        
+        h1:before {
+            content: 'lodding...';
+            position: absolute;
+            border-bottom: 10px solid darkred;
+            top: 0;
+            left: 0;
+            width: 100%;
+            color: cyan;
+            overflow: hidden;
+            animation: animate 4s linear infinite;
+        }
+
+        @keyframes animate{
+            0%{
+                width: 0;
+            }
+
+            100%{
+                width: 100;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>lodding...</h1>
+</body>
+
+</html>
